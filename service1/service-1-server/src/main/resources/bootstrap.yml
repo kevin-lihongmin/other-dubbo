@@ -1,0 +1,28 @@
+server:
+  port: 56030
+spring:
+  application:
+    name: service1
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        # namespace: 71a29bae-d359-4323-a124-1759e2d6cc19
+      # config:
+        # server-addr: 47.112.116.249:8848
+        # file-extension: yaml
+        # namespace: 71a29bae-d359-4323-a124-1759e2d6cc19
+dubbo:
+  scan:
+    base-packages: com.tao.microservice
+  protocol:
+    name: dubbo
+    port: 20800
+  registry:
+    address: nacos://127.0.0.1:8848
+  application:
+    qos-enable: false
+    consumer:
+      check: false

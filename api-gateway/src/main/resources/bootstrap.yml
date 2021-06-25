@@ -1,0 +1,16 @@
+server:
+  port: 56010
+spring:
+  application:
+    name: api-gateway
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.112.116.249:8848
+        namespace: 71a29bae-d359-4323-a124-1759e2d6cc19
+      config:
+        server-addr: 47.112.116.249:8848
+        file-extension: yaml
+        namespace: 71a29bae-d359-4323-a124-1759e2d6cc19
